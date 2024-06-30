@@ -1,13 +1,13 @@
 {
   "type": "module",
-  "name": "@signpostmarv/nodejs-template",
-  "description": "nodejs template",
+  "name": "@satisfactory-dev/predicates.ts",
+  "description": "typescript predicates",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/satisfactory-dev/nodejs-template.git"
+    "url": "git+https://github.com/satisfactory-dev/predicates.ts.git"
   },
-  "funding": "https://github.com/satisfactory-dev/nodejs-template?sponsor=1",
+  "funding": "https://github.com/satisfactory-dev/predicates.ts?sponsor=1",
   "exports": "./index.js",
   "types": "./index.d.ts",
   "devDependencies": {
