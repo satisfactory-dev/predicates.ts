@@ -1,0 +1,23 @@
+{
+  "type": "module",
+  "name": "@signpostmarv/nodejs-template",
+  "description": "nodejs template",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/satisfactory-dev/nodejs-template.git"
+  },
+  "funding": "https://github.com/satisfactory-dev/nodejs-template?sponsor=1",
+  "exports": "./index.js",
+  "types": "./index.d.ts",
+  "devDependencies": {
+    "@types/eslint": "^8.56.10",
+    "@types/node": "^20.14.9",
+    "c8": "^10.1.2",
+    "eslint": "^8.57.0",
+    "prettier": "^3.3.2",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.5.2",
+    "typescript-eslint": "^7.14.1"
+  }
+}
