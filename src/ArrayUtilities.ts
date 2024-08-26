@@ -23,7 +23,7 @@ type NonEmpty<T> = keyof T extends never ? never : T;
 export function non_empty_keys<
 	T extends {[key: string]: unknown} = {[key: string]: unknown}
 >(
-	object:NonEmpty<T>
+	object:NonEmpty<T>,
 ) : [string, ...string[]] {
 	return Object.keys(object) as [string, ...string[]];
 }
@@ -43,7 +43,7 @@ export function require_non_empty_array<
 export function object_keys<
 	T extends {[key: string]: unknown} = {[key: string]: unknown}
 >(
-	object: T
+	object: T,
 ) : (keyof T)[] {
 	return Object.keys(object);
 }
