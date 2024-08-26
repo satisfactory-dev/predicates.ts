@@ -46,9 +46,9 @@ void describe('object_has_property', () => {
 			() => {
 				assert.strictEqual(
 					object_has_property(maybe, property, predicate),
-					expectation
+					expectation,
 				)
-			}
+			},
 		)
 	}
 })
@@ -80,11 +80,11 @@ void describe('object_has_only_properties_that_match_predicate', () => {
 				assert.strictEqual(
 					object_has_only_properties_that_match_predicate(
 						maybe,
-						predicate
+						predicate,
 					),
-					expectation
+					expectation,
 				)
-			}
+			},
 		)
 	}
 })
@@ -121,11 +121,11 @@ void describe('property_exists_on_object', () => {
 				assert.strictEqual(
 					property_exists_on_object(
 						maybe,
-						property
+						property,
 					),
-					expectation
+					expectation,
 				)
-			}
+			},
 		)
 	}
 })
@@ -173,9 +173,9 @@ void describe('object_has_non_empty_array_property', () => {
 						property,
 						predicate,
 					),
-					expectation
+					expectation,
 				)
-			}
+			},
 		)
 	}
 })
@@ -209,9 +209,9 @@ void describe('object_has_property_that_equals', () => {
 						property,
 						expects,
 					),
-					expectation
+					expectation,
 				)
-			}
+			},
 		)
 	}
 })
@@ -243,9 +243,9 @@ void describe('value_is_non_array_object', () => {
 					value_is_non_array_object(
 						maybe,
 					),
-					expectation
+					expectation,
 				)
-			}
+			},
 		)
 	}
 })
@@ -284,9 +284,9 @@ void describe('is_non_empty_array', () => {
 						maybe,
 						predicate,
 					),
-					expectation
+					expectation,
 				)
-			}
+			},
 		)
 	}
 })
@@ -333,9 +333,9 @@ void describe('object_only_has_that_property', () => {
 						property,
 						predicate,
 					),
-					expectation
+					expectation,
 				)
-			}
+			},
 		)
 	}
 })
@@ -348,7 +348,7 @@ void describe('is_string', () => {
 		)
 		assert.strictEqual(
 			is_string('foo'),
-			true
+			true,
 		)
 	})
 })

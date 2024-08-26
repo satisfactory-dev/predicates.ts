@@ -6,7 +6,7 @@ export function object_has_property<
 >(
 	maybe: unknown,
 	property: Property,
-	predicate: undefined|(predicate<Value>) = undefined
+	predicate: undefined|(predicate<Value>) = undefined,
 ): maybe is {[key: string]: unknown} & {[key in Property]: Value} {
 	return (
 		value_is_non_array_object(maybe)
@@ -22,7 +22,7 @@ export function object_has_only_properties_that_match_predicate<
 	Value = unknown
 >(
 	maybe: unknown,
-	predicate:predicate<Value>
+	predicate:predicate<Value>,
 ): maybe is {[key: string]: Value} {
 	return (
 		value_is_non_array_object(maybe)
@@ -45,7 +45,7 @@ export function object_has_non_empty_array_property<
 	property: Property,
 	predicate:
 		| undefined
-		| (predicate<Value>) = undefined
+		| (predicate<Value>) = undefined,
 ): maybe is (
 	& {[key: string]: unknown}
 	& {[key in Property]: [Value, ...Value[]]}
@@ -59,7 +59,7 @@ export function object_has_non_empty_array_property<
 export function object_has_property_that_equals(
 	maybe: unknown,
 	property: string,
-	expects: unknown
+	expects: unknown,
 ): maybe is {[key: string]: unknown} & {
 	[key in typeof property]: typeof expects;
 } {
@@ -67,7 +67,7 @@ export function object_has_property_that_equals(
 }
 
 export function value_is_non_array_object(
-	maybe: unknown
+	maybe: unknown,
 ): maybe is {[key: string]: unknown} {
 	return (
 		'object' === typeof maybe
@@ -80,7 +80,7 @@ export function is_non_empty_array<T = unknown>(
 	maybe: unknown,
 	predicate:
 		| undefined
-		| (predicate<T>) = undefined
+		| (predicate<T>) = undefined,
 ): maybe is [T, ...T[]] {
 	return (
 		maybe instanceof Array
@@ -92,7 +92,7 @@ export function is_non_empty_array<T = unknown>(
 export function object_only_has_that_property<T = unknown>(
 	maybe: unknown,
 	property: string,
-	predicate: undefined | (predicate<T>) = undefined
+	predicate: undefined | (predicate<T>) = undefined,
 ): maybe is {[key in typeof property]: T} {
 	return (
 		value_is_non_array_object(maybe)

@@ -14,7 +14,7 @@ void describe('non_empty_map', () => {
 	void it('behaves', () => {
 		assert.equal(
 			non_empty_map([1,2,3], e => e).length,
-			3
+			3,
 		);
 	});
 })
@@ -23,11 +23,11 @@ void describe('non_empty_keys', () => {
 	void it('behaves', () => {
 		assert.equal(
 			non_empty_keys({} as {[key: string]: unknown}).length,
-			0
+			0,
 		);
 		assert.deepEqual(
 			non_empty_keys({foo: 1, bar: 1}),
-			['foo', 'bar']
+			['foo', 'bar'],
 		);
 	})
 })
@@ -45,7 +45,7 @@ void describe('object_keys', () => {
 	void it('behaves', () => {
 		assert.deepEqual(
 			object_keys({foo: 1, bar: 2, baz: 3}),
-			['foo', 'bar', 'baz']
+			['foo', 'bar', 'baz'],
 		);
 	})
 })
