@@ -11,4 +11,8 @@ export default [
 		},
 	},
 	...config,
+	{
+		files: ['**/*.ts'],
+		ignores: ['**/*.d.ts', '**/*.js', '**/*.mjs'],
+	},
 ];
