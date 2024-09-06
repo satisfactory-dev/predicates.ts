@@ -13,9 +13,8 @@
 /.idea/
 /Makefile
 /.editorconfig
-/.eslintignore
 /.eslintcache
-/.eslintrc.json
+/eslint.config*.mjs
 /.prettierignore
 /.prettierrc
 /tsconfig*.json
