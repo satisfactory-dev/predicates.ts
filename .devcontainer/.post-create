@@ -1,1 +1,1 @@
-export NODE_OPTIONS='--experimental-strip-types --no-warnings=ExperimentalWarning'
+echo 'done'

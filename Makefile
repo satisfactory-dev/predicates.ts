@@ -1,3 +1,5 @@
+TSNODE = node --experimental-strip-types --no-warnings=ExperimentalWarning
+
 install:
 	@npm install
 
@@ -24,11 +26,11 @@ lint: lint--prettier lint--tsc lint--eslint
 
 .PHONY: tests
 tests: build
-	@node ./tests.ts
+	@$(TSNODE) ./tests.ts
 
 .PHONY: coverage
 coverage: build
-	@./node_modules/.bin/c8 node ./tests.ts
+	@./node_modules/.bin/c8 $(TSNODE) ./tests.ts
 
 npm-prep: tests
 	@echo 'building from ./tsconfig.app-npm.json'
