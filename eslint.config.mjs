@@ -6,9 +6,9 @@ export default [
 		languageOptions: {
 			parser,
 			parserOptions: {
-				project: ['./tsconfig.eslint.json']
-			}
-		}
+				project: ['./tsconfig.eslint.json'],
+			},
+		},
 	},
 	...config,
 	{
