@@ -1,8 +1,10 @@
 {
 	"name": "nodejs template",
-	"build": {
-		"dockerfile": "Dockerfile"
-	},
+	"dockerComposeFile": [
+		"docker-compose.yml"
+	],
+	"service": "devcontainer",
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 	"postCreateCommand": "npm config set git-tag-version=false && npm install && echo \"source ./.devcontainer/.post-create\" >> /home/node/.bashrc",
 	"remoteUser": "node",
 	"updateRemoteUserUID": true,
