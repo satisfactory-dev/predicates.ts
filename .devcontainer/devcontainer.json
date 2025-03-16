@@ -1,8 +1,6 @@
 {
 	"name": "nodejs template",
-	"dockerComposeFile": [
-		"docker-compose.yml"
-	],
+	"dockerComposeFile": ["docker-compose.yml"],
 	"service": "devcontainer",
 	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 	"postCreateCommand": "npm config set git-tag-version=false && npm install && echo \"source ./.devcontainer/.post-create\" >> /home/node/.bashrc",
