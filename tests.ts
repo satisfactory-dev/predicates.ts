@@ -5,8 +5,6 @@ import {
 	run,
 } from 'node:test';
 
-const __dirname = import.meta.dirname;
-
 const ac = new AbortController();
 
 let already_stopped = false;

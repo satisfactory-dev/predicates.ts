@@ -1,6 +1,5 @@
 {
 	"compilerOptions": {
-		"allowImportingTsExtensions": true,
 		"noEmitHelpers": true,
 		"sourceMap": true,
 		"newLine": "lf",
