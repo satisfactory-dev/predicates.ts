@@ -28,7 +28,7 @@ tests: build
 
 .PHONY: coverage
 coverage: build
-	@./node_modules/.bin/c8 ./tests.ts
+	@./node_modules/.bin/c8 node ./tests.ts
 
 npm-prep: tests
 	@echo 'building from ./tsconfig.app-npm.json'
