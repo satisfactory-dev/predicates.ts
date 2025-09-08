@@ -22,6 +22,7 @@ jobs:
             - run: ./node_modules/.bin/eslint --config eslint.config.js.mjs './**/*.mjs'
             - run: ./node_modules/.bin/eslint --cache './**/*.ts'
     coverage:
+        if: github.event.repository.visibility == 'public'
         needs: basic-checks
         runs-on: ubuntu-latest
         steps:
