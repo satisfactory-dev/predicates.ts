@@ -33,6 +33,8 @@ jobs:
                   node-version: 23.x
                   cache: 'npm'
             - run: npm ci
+            - name: Build
+              run: ./node_modules/.bin/tsc --project ./tsconfig.app.json
             - name: Generate coverage
               run: ./node_modules/.bin/c8 --config=./.c8rc.coveralls.json node ./tests.ts
             - name: Coveralls GitHub Action

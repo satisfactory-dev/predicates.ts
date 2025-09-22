@@ -18,3 +18,4 @@
 /.prettierignore
 /.prettierrc
 /tsconfig*.json
+/rollup.config.js

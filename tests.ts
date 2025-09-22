@@ -11,8 +11,8 @@ let already_stopped = false;
 
 run({
 	files: [
-		`${__dirname}/tests/src/ArrayUtilities.spec.ts`,
-		`${__dirname}/tests/src/predicates.spec.ts`,
+		`${import.meta.dirname}/tests/src/ArrayUtilities.spec.ts`,
+		`${import.meta.dirname}/tests/src/predicates.spec.ts`,
 	],
 	concurrency: true,
 	signal: ac.signal,

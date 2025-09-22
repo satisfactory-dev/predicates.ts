@@ -30,7 +30,7 @@ tests: build
 coverage: build
 	@./node_modules/.bin/c8 node ./tests.ts
 
-npm-prep: tests
+npm-prep: build tests
 	@echo 'building from ./tsconfig.app-npm.json'
 	@./node_modules/.bin/tsc --project ./tsconfig.app-npm.json
 	@npm publish --dry-run

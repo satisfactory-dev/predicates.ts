@@ -1,6 +1,6 @@
 {
 	"compilerOptions": {
-		"allowImportingTsExtensions": true,
+		"allowImportingTsExtensions": false,
 		"erasableSyntaxOnly": true,
 		"noEmit": true,
 		"noEmitHelpers": true,
