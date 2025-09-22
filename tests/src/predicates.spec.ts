@@ -4,6 +4,9 @@ import {
 } from 'node:test';
 import assert from 'node:assert/strict';
 
+import type {
+	predicate,
+} from '../../index.js';
 import {
 	is_non_empty_array,
 	is_string,
@@ -12,10 +15,9 @@ import {
 	object_has_property,
 	object_has_property_that_equals,
 	object_only_has_that_property,
-	predicate,
 	property_exists_on_object,
 	value_is_non_array_object,
-} from '../../';
+} from '../../index.js';
 
 void describe('object_has_property', () => {
 	const data_sets:[unknown, string, predicate|undefined, boolean][] = [

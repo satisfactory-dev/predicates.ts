@@ -8,7 +8,7 @@ import {
 	non_empty_map,
 	object_keys,
 	require_non_empty_array,
-} from '../../';
+} from '../../index.ts';
 
 void describe('non_empty_map', () => {
 	void it('behaves', () => {

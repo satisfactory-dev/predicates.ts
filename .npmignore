@@ -13,9 +13,9 @@
 /.idea/
 /Makefile
 /.editorconfig
-/.eslintignore
 /.eslintcache
 /eslint.config*.mjs
 /.prettierignore
 /.prettierrc
 /tsconfig*.json
+/rollup.config.js
