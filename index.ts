@@ -1,2 +1,2 @@
-export * from './src/ArrayUtilities.js';
-export * from './src/predicates.js';
+export * from './src/ArrayUtilities.ts';
+export * from './src/predicates.ts';
