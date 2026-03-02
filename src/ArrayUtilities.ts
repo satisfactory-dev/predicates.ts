@@ -1,6 +1,6 @@
 /**
  * Created due to annoyance over array.prototype.map()
- *	forcing [unknown, ...unknown[]] to unknown[]
+ *    forcing [unknown, ...unknown[]] to unknown[]
  */
 export function non_empty_map<
 	ItemInput = unknown,
@@ -13,7 +13,7 @@ export function non_empty_map<
 		ItemOutput,
 		...ItemOutput[],
 	],
->(array:Input, map:(item:ItemInput) => ItemOutput) : Output {
+>(array: Input, map: (item: ItemInput) => ItemOutput): Output {
 	return array.map(map) as Output;
 }
 
@@ -21,19 +21,19 @@ export function non_empty_map<
 type NonEmpty<T> = keyof T extends never ? never : T;
 
 export function non_empty_keys<
-	T extends {[key: string]: unknown} = {[key: string]: unknown}
+	T extends {[key: string]: unknown} = {[key: string]: unknown},
 >(
-	object:NonEmpty<T>,
-) : [string, ...string[]] {
+	object: NonEmpty<T>,
+): [string, ...string[]] {
 	return Object.keys(object) as [string, ...string[]];
 }
 
 export function require_non_empty_array<
 	Item = unknown,
-	NotEmpty = [Item, ...Item[]]
->(maybe:Item[]): NotEmpty {
+	NotEmpty = [Item, ...Item[]],
+>(maybe: Item[]): NotEmpty {
 	if (maybe.length < 1) {
-		throw new Error('Array is empty!')
+		throw new Error('Array is empty!');
 	}
 
 	return maybe as NotEmpty;
@@ -41,9 +41,9 @@ export function require_non_empty_array<
 
 // because typescript doesn't do this automatically
 export function object_keys<
-	T extends {[key: string]: unknown} = {[key: string]: unknown}
+	T extends {[key: string]: unknown} = {[key: string]: unknown},
 >(
 	object: T,
-) : (keyof T)[] {
+): (keyof T)[] {
 	return Object.keys(object);
 }

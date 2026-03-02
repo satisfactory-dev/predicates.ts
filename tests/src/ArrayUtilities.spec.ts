@@ -13,11 +13,11 @@ import {
 void describe('non_empty_map', () => {
 	void it('behaves', () => {
 		assert.equal(
-			non_empty_map([1,2,3], e => e).length,
+			non_empty_map([1, 2, 3], (e) => e).length,
 			3,
 		);
 	});
-})
+});
 
 void describe('non_empty_keys', () => {
 	void it('behaves', () => {
@@ -29,17 +29,17 @@ void describe('non_empty_keys', () => {
 			non_empty_keys({foo: 1, bar: 1}),
 			['foo', 'bar'],
 		);
-	})
-})
+	});
+});
 
 void describe('require_non_empty_array', () => {
 	void it('throws', () => {
-		assert.throws(() => require_non_empty_array([]))
-	})
+		assert.throws(() => require_non_empty_array([]));
+	});
 	void it('doesn\'t throw', () => {
-		assert.doesNotThrow(() => require_non_empty_array([1]))
-	})
-})
+		assert.doesNotThrow(() => require_non_empty_array([1]));
+	});
+});
 
 void describe('object_keys', () => {
 	void it('behaves', () => {
@@ -47,5 +47,5 @@ void describe('object_keys', () => {
 			object_keys({foo: 1, bar: 2, baz: 3}),
 			['foo', 'bar', 'baz'],
 		);
-	})
-})
+	});
+});

@@ -1,8 +1,8 @@
-export type predicate<Value = unknown> = (maybe:unknown) => maybe is Value;
+export type predicate<Value = unknown> = (maybe: unknown) => maybe is Value;
 
 export function object_has_property<
 	Property extends string = string,
-	Value = unknown
+	Value = unknown,
 >(
 	maybe: unknown,
 	property: Property,
@@ -19,27 +19,27 @@ export function object_has_property<
 }
 
 export function object_has_only_properties_that_match_predicate<
-	Value = unknown
+	Value = unknown,
 >(
 	maybe: unknown,
-	predicate:predicate<Value>,
+	predicate: predicate<Value>,
 ): maybe is {[key: string]: Value} {
 	return (
 		value_is_non_array_object(maybe)
-		&& Object.values(maybe).every(e => predicate(e))
+		&& Object.values(maybe).every((e) => predicate(e))
 	);
 }
 
 export function property_exists_on_object(
 	object: {[key: string]: unknown},
 	property: string,
-) :  property is keyof object {
+): property is keyof object {
 	return property in object;
 }
 
 export function object_has_non_empty_array_property<
 	Property extends string = string,
-	Value = unknown
+	Value = unknown,
 >(
 	maybe: unknown,
 	property: Property,
