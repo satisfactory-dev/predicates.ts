@@ -10,6 +10,13 @@
   "funding": "https://github.com/satisfactory-dev/predicates.ts?sponsor=1",
   "exports": "./index.js",
   "types": "./index.d.ts",
+  "files": [
+    "src",
+    "index.js",
+    "index.d.ts",
+    "index.ts",
+    "index.js.map"
+  ],
   "devDependencies": {
     "@signpostmarv/eslint-config": "^0.8.2",
     "@types/eslint": "^9.6.1",
