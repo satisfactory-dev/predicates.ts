@@ -14,7 +14,7 @@ export function non_empty_map<
 		...ItemOutput[],
 	],
 >(array: Input, map: (item: ItemInput) => ItemOutput): Output {
-	return array.map(map) as Output;
+	return array.map(map) as unknown as Output;
 }
 
 // from https://stackoverflow.com/a/72041609/1498831
